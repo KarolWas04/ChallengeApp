@@ -1,30 +1,26 @@
-﻿string name = "Ewa";
-char sex = 'K';
-int age = 30;
+﻿int number = 625832619;
+string numberInString = number.ToString();
+char[] letters= numberInString.ToArray();
 
-if (sex == 'K')
+List<char> numbers= new List<char>();
+numbers.Add('0');
+numbers.Add('1');
+numbers.Add('2');
+numbers.Add('3');
+numbers.Add('4');
+numbers.Add('5');
+numbers.Add('6');
+numbers.Add('7');
+numbers.Add('8');
+numbers.Add('9');
+
+
+foreach (var singular in numbers)
 {
-    if (age < 30)
+    int count = 0;
+    foreach (var x in letters)
     {
-        Console.WriteLine("Kobieta ponizej 30");
+        if (singular==x) count++;
     }
-    else if (age > 30)
-    {
-        Console.WriteLine("Kobieta powyzej 30");
-    }
-    else if (name == "Ewa" && age == 30)
-    {
-        Console.WriteLine("Ewa lat 30");
-    }
-}
-else if (sex != 'K')
-{
-    if (age < 18)
-    {
-        Console.WriteLine("Niepelnoletni mezczyzna");
-    }
-    else  if (age > 18)
-    {
-        Console.WriteLine("Pelnoletni mezczyzna");
-    }
+    Console.WriteLine(singular + "=>" + count);
 }
