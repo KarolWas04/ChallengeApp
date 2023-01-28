@@ -1,3 +1,5 @@
+using NUnit.Framework;
+
 namespace ChallengeApp.Tests
 {
     public class Tests
